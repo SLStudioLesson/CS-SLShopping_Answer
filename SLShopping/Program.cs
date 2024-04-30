@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using SlShopping.Data;
-using SlShopping.Models;
+using SLShopping.Data;
+using SLShopping.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

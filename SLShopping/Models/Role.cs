@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SlShopping.Models
+namespace SLShopping.Models
 {
     public class Role
     {
@@ -11,7 +11,5 @@ namespace SlShopping.Models
         [Required]
         [StringLength(40)]
         public string Name { get; set; }
-
-        //public List<UserRole> UserRoles { get; set; } = [];
     }
 }

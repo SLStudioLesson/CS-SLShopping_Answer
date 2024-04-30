@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SlShopping.Data;
+using SLShopping.Data;
 
 #nullable disable
 
-namespace SlShopping.Migrations
+namespace SLShopping.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20240429090400_InitialCreate")]
@@ -162,7 +162,7 @@ namespace SlShopping.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("SlShopping.Models.Brand", b =>
+            modelBuilder.Entity("SLShopping.Models.Brand", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -180,7 +180,7 @@ namespace SlShopping.Migrations
                     b.ToTable("Brands");
                 });
 
-            modelBuilder.Entity("SlShopping.Models.Category", b =>
+            modelBuilder.Entity("SLShopping.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -197,7 +197,7 @@ namespace SlShopping.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("SlShopping.Models.Product", b =>
+            modelBuilder.Entity("SLShopping.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -249,7 +249,7 @@ namespace SlShopping.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("SlShopping.Models.Role", b =>
+            modelBuilder.Entity("SLShopping.Models.Role", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -272,7 +272,7 @@ namespace SlShopping.Migrations
                     b.ToTable("Roles");
                 });
 
-            modelBuilder.Entity("SlShopping.Models.User", b =>
+            modelBuilder.Entity("SLShopping.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -340,7 +340,7 @@ namespace SlShopping.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("SlShopping.Models.UserRole", b =>
+            modelBuilder.Entity("SLShopping.Models.UserRole", b =>
                 {
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
@@ -362,7 +362,7 @@ namespace SlShopping.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
                 {
-                    b.HasOne("SlShopping.Models.User", null)
+                    b.HasOne("SLShopping.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -371,7 +371,7 @@ namespace SlShopping.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
                 {
-                    b.HasOne("SlShopping.Models.User", null)
+                    b.HasOne("SLShopping.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -386,7 +386,7 @@ namespace SlShopping.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("SlShopping.Models.User", null)
+                    b.HasOne("SLShopping.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -395,20 +395,20 @@ namespace SlShopping.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
                 {
-                    b.HasOne("SlShopping.Models.User", null)
+                    b.HasOne("SLShopping.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("SlShopping.Models.Product", b =>
+            modelBuilder.Entity("SLShopping.Models.Product", b =>
                 {
-                    b.HasOne("SlShopping.Models.Brand", "Brand")
+                    b.HasOne("SLShopping.Models.Brand", "Brand")
                         .WithMany("Products")
                         .HasForeignKey("BrandId");
 
-                    b.HasOne("SlShopping.Models.Category", "Category")
+                    b.HasOne("SLShopping.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId");
 
@@ -417,12 +417,12 @@ namespace SlShopping.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("SlShopping.Models.Brand", b =>
+            modelBuilder.Entity("SLShopping.Models.Brand", b =>
                 {
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("SlShopping.Models.Category", b =>
+            modelBuilder.Entity("SLShopping.Models.Category", b =>
                 {
                     b.Navigation("Products");
                 });

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace SlShopping.Models
+namespace SLShopping.Models
 {
     [Keyless]
     public class UserRole

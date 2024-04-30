@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SlShopping.Models
+namespace SLShopping.Models
 {
     public class Category
     {

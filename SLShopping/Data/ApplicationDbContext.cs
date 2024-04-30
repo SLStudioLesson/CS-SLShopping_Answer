@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using SlShopping.Models;
+using SLShopping.Models;
 using System.Reflection.Emit;
 
-namespace SlShopping.Data;
+namespace SLShopping.Data;
 
 public class ApplicationDbContext : IdentityDbContext<User, IdentityRole<int>, int>
 {

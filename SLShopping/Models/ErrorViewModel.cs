@@ -1,4 +1,4 @@
-namespace SlShopping.Models
+namespace SLShopping.Models
 {
     public class ErrorViewModel
     {

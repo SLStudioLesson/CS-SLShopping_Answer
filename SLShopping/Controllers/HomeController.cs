@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using SlShopping.Models;
+using SLShopping.Models;
 using System.Diagnostics;
 
-namespace SlShopping.Controllers
+namespace SLShopping.Controllers
 {
     public class HomeController : Controller
     {
@@ -18,10 +18,10 @@ namespace SlShopping.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        //public IActionResult Privacy()
+        //{
+        //    return View();
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

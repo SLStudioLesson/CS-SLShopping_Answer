@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
-namespace SlShopping.Models;
+namespace SLShopping.Models;
 
 public class User : IdentityUser<int>
 {

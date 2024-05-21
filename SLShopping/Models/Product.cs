@@ -18,9 +18,7 @@ namespace SLShopping.Models
         public int Price { get; set; }
         public float Weight { get; set; }
         public float Width { get; set; }
-        //1つのブランドを持つ
         public Brand? Brand { get; set; } = null!;
-        //1つのカテゴリを持つ
         public Category? Category { get; set; } = null!;
     }
 }

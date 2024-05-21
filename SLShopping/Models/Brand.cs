@@ -8,6 +8,7 @@ namespace SLShopping.Models
         [Required]
         [StringLength(45)]
         public string Name { get; set; }
+        public string Color { get; set; }
         public List<Product> Products { get; set; } = [];
     }
 }

@@ -38,7 +38,7 @@ namespace SLShopping.Controllers
 
             if (!string.IsNullOrEmpty(searchModel.Name))
             {
-                categories = categories.Where(c => c.Name.StartsWith(searchModel.Name));
+                categories = categories.Where(c => c.Name.Contains(searchModel.Name));
             }
             searchModel.Results = await categories.ToListAsync();
             return View(searchModel);
